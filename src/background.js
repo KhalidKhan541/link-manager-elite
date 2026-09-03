@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener((msg, s, resp) => { if(msg.action === 'getLinksElite') { chrome.storage.local.get('links', d => resp({links: d.links || [], count: (d.links || []).length})); return true; } });
